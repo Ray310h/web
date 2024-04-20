@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Sky Streaming</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="background">
+            <!-- Puedes agregar una imagen de fondo aquí -->
+        </div>
+        <div class="content">
+            <h1>Welcome to Star Sky Streaming</h1>
+            <div class="seasons">
+                <div class="season-item" onclick="loadSeason(1)">
+                    Season 1
+                </div>
+                <div class="season-item" onclick="loadSeason(2)">
+                    Season 2
+                </div>
+                <div class="season-item" onclick="loadSeason(3)">
+                    Season 3
+                </div>
+            </div>
+            <div class="actions">
+                <button class="like"><i class="fas fa-thumbs-up"></i> 80%</button>
+                <button class="dislike"><i class="fas fa-thumbs-down"></i> 20%</button>
+            </div>
+            <div class="episodes">
+                <div class="episode">Episode 1</div>
+                <div class="episode">Episode 2</div>
+                <div class="episode">Episode 3</div>
+                <div class="episode">Episode 4</div>
+                <div class="episode">Episode 5</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

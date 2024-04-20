@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/masinfo.css">
+    <link rel="stylesheet" href="css/estilo%20carrusel.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+    <title>Star blox</title>
+    <style>
+        
+        body {
+            background: #141414
+    overflow: hidden; /* Bloquea el scroll en todo el body */
+}
+
+      
+        #informacion {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        #titulo-informacion {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        #texto-informacion {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+    </header>
+
+    <main>
+        <div class="pelicula-principal">
+            <div class="contenedor">
+                <h3 class="titulo">Descubre la pasarela 2024</h3>
+                <p class="descripcion">
+                    Celebrando la Moda en su Máxima Expresión
+
+Bienvenidos a la Pasarela 2024, un evento que marcó un hito en el mundo de la moda. Esta celebración única reunió a diseñadores visionarios, modelos destacados y amantes de la moda de todo el mundo en una exhibición inolvidable de creatividad y estilo.
+
+Sumérgete en una experiencia que redefine la elegancia y la sofisticación. Desde las exquisitas creaciones de alta costura hasta las innovadoras propuestas de prêt-à-porter, cada detalle en la pasarela contó una historia de audacia y originalidad.
+
+La Pasarela 2024 tuvo lugar el 15 de mayo de 2024 en el Centro de Convenciones Star blox, ubicado en la vibrante Ciudad Metrópolis. Fue una oportunidad única para presenciar la evolución de la moda y explorar nuevas tendencias que marcarán el rumbo del estilo en los próximos años.
+
+Revive los momentos más emocionantes de este evento lleno de glamour y emoción. Explora la pasión y la dedicación detrás de cada diseño presentado y experimenta la moda en todo su esplendor.
+
+No te pierdas la oportunidad de disfrutar este emocionante viaje por la moda. Únete a nosotros mientras celebramos la creatividad y el arte que dan forma a la industria del vestuario.
+
+
+                </p>            
+                <a href="cine.html" class="boton"><i class="back"></i>Regresar</a>
+            </div>
+        </div>
+
+       
+        <!-- Contenedor de información oculta -->
+        <div id="informacion">
+            <h2 id="titulo-informacion">Pasarela 2024</h2>
+            <p id="texto-informacion">
+            </p>
+        </div>
+    </main>
+    
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script>
+        // Función para mostrar el cuadro de información
+        function mostrarInformacion() {
+            var informacion = document.getElementById("informacion");
+            informacion.style.display = "block";
+        }
+    </script>
+</body>
+</html>

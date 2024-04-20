@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/estilo%20carrusel.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+    <title>Star blox</title>
+    <style>
+        /* Estilos adicionales para la sección de carrusel */
+        .carrusel {
+            margin-top: 40px;
+            overflow: hidden;
+        }
+        .carrusel-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            gap: 20px;
+            padding-bottom: 20px;
+        }
+        .carrusel-item {
+            flex: 0 0 auto;
+            width: 200px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .carrusel-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .carrusel-item:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="contenedor">
+            <h2 class="logotipo">Star blox</h2>
+            <nav>
+                <a href="#" class="activo">Inicio</a>
+                <a href="#">Programas</a>
+                <a href="#">Películas</a>
+                <a href="#">Más Recientes</a>
+                <a href="#">Mi lista</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="pelicula-principal">
+            <div class="contenedor">
+                <h3 class="titulo">Pasarela 2024 </h3>
+                
+                <p class="descripcion">
+                    Descubre la moda en su máxima expresión en esta exclusiva colaboración. Déjate llevar por la pasión y el estilo en una gran experiencia. Prepárate para una exhibición deslumbrante de creatividad y elegancia. No te pierdas este evento imperdible lleno de glamour y sofisticación.
+                </p>
+                <button role="button" class="boton"><i class="fas fa-play"></i>Reproducir</button>
+             <a href="mas%20info%20peli%201.html" class="boton"><i class="fas fa-info-circle"></i>Más información</a>
+            </div>
+        </div>
+
+        <!-- Sección de Nuevos Lanzamientos (Carrusel) -->
+        <section class="carrusel">
+            <h2 style="color: #fff; text-align: center; margin-bottom: 20px;">Nuevos Lanzamientos</h2>
+            <div class="carrusel-container">
+                <div class="carrusel-item">
+                    <img src="img/cinebloxy.gif"4¿ alt="Nuevo Lanzamiento 1">
+                </div>
+                <div class="carrusel-item">
+                    <img src="nuevo2.jpg" alt="Nuevo Lanzamiento 2">
+                </div>
+                <div class="carrusel-item">
+                    <img src="nuevo3.jpg" alt="Nuevo Lanzamiento 3">
+                </div>
+                <!-- Agrega más elementos carrusel-item según sea necesario -->
+            </div>
+        </section>
+    </main>
+    
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
