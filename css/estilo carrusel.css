@@ -1,0 +1,77 @@
+/* Estilos adicionales para la sección de carrusel */
+.carrusel {
+    margin-top: 40px;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.carrusel-container {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.carrusel-item {
+    flex: 0 0 auto;
+    width: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.carrusel-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.carrusel-item:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para las flechas de navegación del carrusel */
+.carrusel-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.carrusel-controls button {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    pointer-events: all;
+}
+
+.carrusel-controls button:hover {
+    background: rgba(255, 255, 255, 0.5);
+    background: #fff;
+    color: #000;
+    box-shadow: 
+        0 0 5px rgba(255, 255, 255, 0.8),
+        0 0 10px rgba(255, 255, 255, 0.8),
+        0 0 20px rgba(255, 255, 255, 0.8),
+        0 0 40px rgba(255, 255, 255, 0.8),
+        0 0 80px rgba(255, 255, 255, 0.8),
+        0 0 160px rgba(255, 255, 255, 0.8); /* Añadir efecto de destellos al hacer hover */
+
+}
+
+.carrusel-controls button:focus {
+    outline: none;
+}
+
