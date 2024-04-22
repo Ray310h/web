@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/estilo%20carrusel.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Agregar Font Awesome -->
+
     <title>Star blox</title>
     <style>
         /* Estilos adicionales para la sección de carrusel */
@@ -36,12 +37,48 @@
         .carrusel-item:hover {
             transform: scale(1.05);
         }
+     .resplandor-imagen {
+            width: 150px;
+            height: auto;
+            display: block;
+            filter: drop-shadow(0 0 10px rgba(229, 9, 20, 0.8)) drop-shadow(0 0 20px rgba(229, 9, 20, 0.8)) drop-shadow(0 0 40px rgba(229, 9, 20, 0.8));
+            animation: animarResplandor 2s linear infinite alternate; /* Aplicar animación al filtro */
+        }
+         /* Definir la animación para la luz intermitente */
+@keyframes animateGlow {
+    0% {
+        filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.8)); /* Empieza con una sombra roja */
+    }
+    50% {
+        filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.8)); /* Aumenta la intensidad a la mitad */
+    }
+    100% {
+        filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.8)); /* Vuelve al estado inicial */
+    }
+}
+
+/* Aplicar la animación al elemento img con la clase 'logotipo' */
+img.resplandor-imagen {
+    animation: animateGlow 3s ease-in-out infinite; /* Aplicar la animación de manera infinita */
+}
+        /* Establecer transición de opacidad para el contenido principal */
+main {
+    transition: opacity 0.5s ease;
+    opacity: 1;
+}
+
+/* Ocultar el contenido principal al cambiar de página */
+main.oculto {
+    opacity: 0;
+}
+
+
     </style>
 </head>
 <body>
     <header>
         <div class="contenedor">
-            <h2 class="logotipo">Star blox</h2>
+            <img src="img/fontbolt_2.png" alt="Logo" class="resplandor-imagen">
             <nav>
                 <a href="#" class="activo">Inicio</a>
                 <a href="#">Programas</a>
@@ -55,13 +92,16 @@
     <main>
         <div class="pelicula-principal">
             <div class="contenedor">
-                <h3 class="titulo">Pasarela 2024 </h3>
+                <!-- Reemplazar el título con una imagen -->
+                <img src="fonts/pasarela.png" alt="Pasarela 2024 Imagen" class="imagen-titulo">
+                
+                <!-- Contenido adicional omitido por brevedad -->
                 
                 <p class="descripcion">
                     Descubre la moda en su máxima expresión en esta exclusiva colaboración. Déjate llevar por la pasión y el estilo en una gran experiencia. Prepárate para una exhibición deslumbrante de creatividad y elegancia. No te pierdas este evento imperdible lleno de glamour y sofisticación.
                 </p>
-                <button role="button" class="boton"><i class="fas fa-play"></i>Reproducir</button>
-             <a href="mas%20info%20peli%201.html" class="boton"><i class="fas fa-info-circle"></i>Más información</a>
+                <a href="videoplay.html" class="boton"><i class="fas fa-play"></i>Reproducir</a>
+                <a href="mas%20info%20peli%201.html" class="boton"><i class="fas fa-info-circle"></i>Más información</a>
             </div>
         </div>
 
@@ -70,7 +110,7 @@
             <h2 style="color: #fff; text-align: center; margin-bottom: 20px;">Nuevos Lanzamientos</h2>
             <div class="carrusel-container">
                 <div class="carrusel-item">
-                    <img src="cinebloxy.gif"4¿ alt="Nuevo Lanzamiento 1">
+                    <img src="img/cinebloxy.gif" alt="Nuevo Lanzamiento 1">
                 </div>
                 <div class="carrusel-item">
                     <img src="nuevo2.jpg" alt="Nuevo Lanzamiento 2">
@@ -82,8 +122,15 @@
             </div>
         </section>
     </main>
-    
-    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
+
+    <script>
+        function fadeInContent() {
+            document.body.style.opacity = 1;
+            const btn = document.querySelector('.btn');
+            setTimeout(() => {
+                btn.style.opacity = 1;
+            }, 300);
+        }
+    </script>
 </body>
 </html>
