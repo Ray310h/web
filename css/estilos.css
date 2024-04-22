@@ -1,6 +1,6 @@
 :root {
 	--rojo: #E50914;
-	--fondo: #141414;
+	--fondo: #020202;
 }
 
 * {
@@ -21,12 +21,15 @@ body {
 
 header {
 	padding: 30px 0;
+     backdrop-filter: blur(15px);
+    
 }
 
 header .contenedor {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+     backdrop-filter: blur(15px);
 }
 
 header .logotipo {
@@ -65,11 +68,16 @@ header nav a.activo {
 	margin-bottom: 6.25em;
 }
 
+
 .pelicula-principal .titulo {
 	font-weight: 600;
 	font-size: 3.12em;
 	margin-bottom: 0.4em;
+    font-family: test;
+
 }
+ 
+
 
 .pelicula-principal .descripcion {
 	font-weight: normal;
@@ -77,8 +85,8 @@ header nav a.activo {
 	line-height: 1.75em;
 	max-width: 50%;
 	margin-bottom: 1.25em;
-     text-decoration: none;
-            
+    text-decoration: none;
+ 
 }
 
 .pelicula-principal .boton {
@@ -91,14 +99,12 @@ header nav a.activo {
 	cursor: pointer;
 	transition: .3s ease all;
 	font-size: 1.12em;
-     text-decoration: none;
+    text-decoration: none;
 }
 
 .pelicula-principal .boton:hover {
 	background: #fff;
 	color: #000;
-        background: #fff;
-    color: #000;
     box-shadow: 
         0 0 5px rgba(255, 255, 255, 0.8),
         0 0 10px rgba(255, 255, 255, 0.8),
@@ -131,4 +137,23 @@ header nav a.activo {
 	.pelicula-principal .descripcion {
 		max-width: 100%;
 	}
+   
+    .imagen-titulo {
+    width: 100%; /* Ancho máximo para adaptarse al contenedor */
+    height: auto; /* Altura automática para mantener la proporción */
+    max-width: 100%; /* Evita que la imagen se agrande más allá de su tamaño original */
 }
+
+/* Media Query para tamaños de pantalla más pequeños */
+@media screen and (max-width: 767px) {
+    .imagen-titulo {
+        max-width: 80%; /* Reducir el tamaño al 80% del ancho máximo en pantallas más pequeñas */
+    }
+}
+    @media screen and (max-width: 767px) {
+    .pelicula-principal {
+        background-size: 100% auto; /* Ajustar el tamaño del fondo al 100% del ancho y altura automática */
+    }
+}
+
+
